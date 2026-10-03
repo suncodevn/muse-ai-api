@@ -8,10 +8,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-v18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![React 19](https://img.shields.io/badge/React-v19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas_%2F_Local-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-[**🌐 Live Studio Playground**](https://museai.suncodevn.com/) • [**📖 Interactive API Docs**](https://museai.suncodevn.com/docs) • [**💬 Telegram / Support**](https://museai.suncodevn.com/)
+[**🌐 Live Studio Playground**](https://museai.suncodevn.com/) • [**📖 Interactive API Docs**](https://museai.suncodevn.com/docs) • [**💬 Support & Community**](https://museai.suncodevn.com/)
 
 ---
 
@@ -77,60 +76,17 @@ flowchart LR
 
 ---
 
-## 🚀 Quick Start & Installation
+## 🚀 Getting Started in 3 Simple Steps
 
-### Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **MongoDB**: v5.0+ (Local or MongoDB Atlas)
+### Step 1: Create an Account & Get Your API Key
+1. Go to [https://museai.suncodevn.com/](https://museai.suncodevn.com/) and create your developer account.
+2. Navigate to your **Dashboard** or **Settings** to retrieve your unique **API Key**.
 
-### 1. Clone & Install
-```bash
-git clone https://github.com/your-username/muse-ai-platform.git
-cd muse-ai-platform
+### Step 2: (Optional) Plug in Your Own Meta Account (Dedicated Pool)
+If you already possess a Meta Muse AI account, extract your direct WebSocket URL (`wss://...`) via DevTools and paste it into **Settings > Dedicated Cookie Pool**. This allows your API calls to run exclusively on your private Meta VM with dedicated throughput.
 
-# Install backend dependencies
-npm install
-
-# Install frontend dependencies
-cd client && npm install && cd ..
-```
-
-### 2. Configure Environment (`.env`)
-```env
-PORT=8001
-MONGODB_URI=mongodb://127.0.0.1:27017/muse_ai
-JWT_SECRET=your_super_secret_jwt_key_2026
-
-# Default Meta Cookies (Fallback)
-MUSE_COOKIES=datr=...; hatch_sess=...;
-
-# Optional Residential Proxy (if running web scraping mode on VPS)
-# MUSE_PROXY=http://user:pass@proxy-ip:port
-
-# SePay VietQR Settings
-SEPAY_BANK=MBBank
-SEPAY_ACC_NUM=0987654321
-SEPAY_ACC_NAME=MUSE AI GATEWAY
-SEPAY_API_KEY=your_sepay_webhook_secret
-
-# USDT Crypto Settings
-USDT_ADDRESS=TXa8B9cD2eF4gH6jK8mN0pQ2rS4tU6vW8x
-USDT_NETWORK=TRC20
-USDT_RATE=25400
-```
-
-### 3. Build & Run
-```bash
-# Build React 19 Frontend
-npm run build
-
-# Start Node.js Server
-npm start
-
-# Or run with PM2 for production
-pm2 start server.js --name "muse-ai"
-```
-Visit: **`http://localhost:8001`** (or your domain: **`https://museai.suncodevn.com/`**).
+### Step 3: Start Calling the API
+Include your API Key in the authorization header and call any of the endpoints below.
 
 ---
 
@@ -142,8 +98,8 @@ Authorization: Bearer YOUR_MUSE_API_KEY
 Content-Type: application/json
 ```
 
-### 1. Chat AI Streaming (SSE)
-* **Endpoint**: `POST /api/v1/chat`
+### 1. Chat AI Streaming (Server-Sent Events)
+* **Endpoint**: `POST https://museai.suncodevn.com/api/v1/chat`
 
 #### Python
 ```python
@@ -173,7 +129,7 @@ print()
 ---
 
 ### 2. Imagine Image Generation
-* **Endpoint**: `POST /api/v1/generate-image`
+* **Endpoint**: `POST https://museai.suncodevn.com/api/v1/generate-image`
 
 #### Node.js (Axios)
 ```javascript
@@ -202,7 +158,7 @@ generate();
 ---
 
 ### 3. AI MP4 Video Synthesis
-* **Endpoint**: `POST /api/v1/generate-video`
+* **Endpoint**: `POST https://museai.suncodevn.com/api/v1/generate-video`
 
 #### cURL
 ```bash
@@ -224,7 +180,7 @@ curl -X POST https://museai.suncodevn.com/api/v1/generate-video \
 3. Switch to the **Network** tab (next to Console) $\rightarrow$ Click **WS** filter (or type `noise` in Filter).
 4. Press **F5** to refresh the page.
 5. Right-click the connection named `noise?vm_id=...` $\rightarrow$ **Copy** $\rightarrow$ **Copy URL** *(starts with `wss://hatch.metaaivm.com/...`)*.
-6. Paste this `wss://` URL into [Admin / User Dedicated Cookie Pool](https://museai.suncodevn.com/admin) $\rightarrow$ Instantly connected!
+6. Paste this `wss://` URL into [Admin / User Dedicated Cookie Pool](https://museai.suncodevn.com/settings) $\rightarrow$ Instantly connected!
 
 ---
 
@@ -269,54 +225,35 @@ Dự án giúp bạn dễ dàng đưa các tính năng AI hàng đầu của Met
 
 ---
 
-## 🛠️ Hướng Dẫn Cài Đặt Nhanh
+## 🚀 Bắt Đầu Tích Hợp API Trong 3 Bước Đơn Giản
 
-### 1. Cài đặt các gói phụ thuộc
-```bash
-git clone https://github.com/your-username/muse-ai-platform.git
-cd muse-ai-platform
-npm install
-cd client && npm install && cd ..
-```
+### Bước 1: Đăng Ký Tài Khoản & Lấy API Key
+1. Truy cập [https://museai.suncodevn.com/](https://museai.suncodevn.com/) và đăng ký tài khoản lập trình viên.
+2. Vào mục **Bảng Điều Khiển** hoặc **Cài Đặt** để sao chép **API Key** cá nhân của bạn.
 
-### 2. Khởi chạy hệ thống
-```bash
-# Build React 19 Frontend sang bản production
-npm run build
+### Bước 2: (Tùy Chọn) Kết Nối Tài Khoản Meta Riêng
+Nếu bạn đã có tài khoản Meta Muse AI, hãy lấy link WebSocket (`wss://...`) theo hướng dẫn bên dưới và dán vào mục **Cài Đặt > Hồ Cookie Riêng** để tận dụng toàn bộ hạn mức máy ảo riêng biệt của bạn.
 
-# Chạy server
-npm start
-
-# Hoặc chạy nền với PM2
-pm2 start server.js --name "muse-ai"
-```
-Mở trình duyệt: **`https://museai.suncodevn.com/`** hoặc `http://localhost:8001`.
+### Bước 3: Gọi API Vào Ứng Dụng
+Sử dụng API Key vừa nhận được và gọi các endpoint tạo ảnh, video hoặc chat theo tài liệu mẫu.
 
 ---
 
 ## 💡 Hướng Dẫn 10 Giây Lấy Link WebSocket Trực Tiếp (`wss://`)
 
-1. Mở trình duyệt PC đã đăng nhập [muse.ai](https://muse.ai) $\rightarrow$ Nhấn **F12**.
-2. Chọn tab **Network** $\rightarrow$ Chọn bộ lọc **WS** (hoặc gõ chữ `noise`).
+1. Mở trình duyệt PC đã đăng nhập [muse.ai](https://muse.ai) $\rightarrow$ Nhấn **F12** mở DevTools.
+2. Chọn tab **Network** $\rightarrow$ Chọn bộ lọc **WS** (hoặc gõ chữ `noise` vào ô Filter).
 3. Nhấn **F5** để tải lại trang `muse.ai`.
 4. Chuột phải vào kết nối có tên `noise?vm_id=...` $\rightarrow$ Chọn **Copy** $\rightarrow$ **Copy URL**.
-5. Vào [Trang Quản Trị](https://museai.suncodevn.com/admin) $\rightarrow$ Dán đường link `wss://...` đó vào ô **Đường Link WebSocket Trực Tiếp** $\rightarrow$ Trạng thái chuyển ngay sang **🟢 Trực tuyến**!
+5. Vào [Trang Quản Trị / Cài Đặt Hồ Cookie](https://museai.suncodevn.com/settings) $\rightarrow$ Dán đường link `wss://...` đó vào ô **Đường Link WebSocket Trực Tiếp** $\rightarrow$ Kết nối thành công ngay lập tức!
 
 ---
 
-## 👥 Tài Khoản Mặc Định Sau Khi Khởi Động
+## 🤝 Đóng Góp & Hỗ Trợ (Contributing & Support)
 
-| Vai Trò | Email | Mật Khẩu | Requests |
-| :--- | :--- | :--- | :--- |
-| **Quản Trị Viên (Admin)** | `admin@muse.ai` | `Admin@123456` | 99,999 |
-| **Lập Trình Viên (Demo)** | `demo@muse.ai` | `Demo@123456` | 150 |
-
----
-
-## 📜 Giấy Phép & Đóng Góp (License & Contributing)
-
-* Phân phối theo giấy phép mã nguồn mở **MIT License**.
-* Mọi đóng góp, báo lỗi hoặc đề xuất tính năng xin vui lòng gửi Pull Request hoặc mở Issue trên GitHub.
+* Nền tảng chính thức: [https://museai.suncodevn.com/](https://museai.suncodevn.com/)
+* Tài liệu chi tiết: [https://museai.suncodevn.com/docs](https://museai.suncodevn.com/docs)
+* Giấy phép phân phối: **MIT License**.
 
 <div align="center">
   <sub>Bản quyền © 2026 <a href="https://museai.suncodevn.com/"><strong>Muse AI Platform & SunCodeVN</strong></a>. Toàn quyền bảo lưu.</sub>
